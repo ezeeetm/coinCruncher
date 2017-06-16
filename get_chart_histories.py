@@ -25,6 +25,12 @@ def chart_history_factory ( currency_pairs ):
             print "     --- CURRENCY PAIR: %s ---" % (currency_pair)
             url = "https://poloniex.com/public?command=returnChartData&currencyPair=%s&start=0000000000&end=9999999999&period=%s" % ( currency_pair, periods[period]['seconds'] )
             chart_history = request ( url )
+            for record in chart_history:
+                record.pop("quoteVolume", None)
+                record.pop("high", None)
+                record.pop("low", None)
+                record.pop("close", None)
+                record.pop("open", None)
             file = ".\data\chart_histories\%s\%s.json" % (period, currency_pair)
             write (file, chart_history)
 

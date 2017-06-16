@@ -12,3 +12,8 @@ def write (file, data):
                 raise
     with open(file, 'w') as outfile:
         json.dump(data, outfile)
+
+def read (file):
+    with open(file) as data_file:    
+        data = json.load(data_file)
+        return data

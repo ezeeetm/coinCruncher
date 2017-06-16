@@ -36,7 +36,10 @@ def currency_pair_factory(currencies):
                 currency_pairs.append(cpair_string)
     write ('.\data\currency_pairs.json', currency_pairs )
 
+
 if __name__ == '__main__':
     start_time = time.time()
     currencies = get_currencies()
     currency_pair_factory(currencies)
+    elapsedTime = (time.time() - start_time)/60
+    print "--- finished in %s minutes ---" % (elapsedTime)

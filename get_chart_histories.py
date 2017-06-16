@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 import time
-from request import request
-from local_data import *
+from request_helper import request
+from data_helper import *
 
 
-parse_periods = ['4h']  # ['1d','4h','2h','30m','15m','5m']
+parse_periods = ['1d','4h','2h','30m','15m','5m']  # ['1d','4h','2h','30m','15m','5m']
 periods = {
     '5m' : {'seconds': 300 },
     '15m' : {'seconds': 900 },

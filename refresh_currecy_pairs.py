@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
-from request_helper import request
-from data_helper import *
+from modules.web_request_helper import request
+from modules.fs_helper import *
 
 parent_currencies = [
     'BTC',
